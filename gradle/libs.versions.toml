@@ -1,0 +1,29 @@
+[versions]
+
+template = "0.0.1"
+
+kotlin = "2.0.0"
+kotlinx-serialization = "1.7.0"
+
+supabase-edge-functions = "0.0.1"
+supabase = "2.5.0"
+
+[plugins]
+
+conventions-kmp = { id = "conventions-kmp", version.ref = "template" }
+conventions-function = { id = "conventions-function", version.ref = "template" }
+
+supabase-edge-functions = { id = "io.github.manriif.supabase.functions", version.ref = "supabase-edge-functions" }
+
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+[libraries]
+
+
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+supabase-edge-functions-gradle-plugin = { module = "io.github.manriif.supabase-functions:gradle-plugin", version.ref = "supabase-edge-functions" }
+supabase-gotrue = { module = "io.github.jan-tennert.supabase:gotrue-kt", version.ref = "supabase" }
+supabase-postgrest = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "supabase" }
