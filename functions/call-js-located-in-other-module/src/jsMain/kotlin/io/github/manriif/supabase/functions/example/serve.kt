@@ -1,4 +1,4 @@
-package io.github.manriif.supabase.functions.example.hello
+package io.github.manriif.supabase.functions.example
 
 import kotlinx.coroutines.await
 import org.w3c.fetch.Request

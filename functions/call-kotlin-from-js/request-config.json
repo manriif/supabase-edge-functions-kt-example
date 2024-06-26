@@ -1,0 +1,25 @@
+{
+    "headers": {
+        "Authorization": "Bearer ${ANON_KEY}"
+    },
+    "requests": [
+        {
+            "name": "calling JS bonjour() without name parameter should fail with 400 status code`",
+            "method": "get",
+            "validation": {
+                "status": 400
+            }
+        },
+        {
+            "name": "calling JS bonjour(Paul) should returns 'Bonjour Paul, comment allez-vous ?`",
+            "method": "get",
+            "parameters": {
+                "name": "Paul"
+            },
+            "validation": {
+                "type": "plain",
+                "body": "Bonjour Paul, comment allez-vous ?"
+            }
+        }
+    ]
+}
