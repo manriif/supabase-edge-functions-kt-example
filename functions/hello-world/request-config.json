@@ -1,22 +1,35 @@
 {
     "headers": {
-        "Authorization": "Bearer ${ANON_KEY}",
-        "Content-Type": "application/json"
+        "Authorization": "Bearer ${ANON_KEY}"
     },
     "requests": [
         {
-            "name": "my-awesome-request",
-            "type": "json",
-            "method": "post",
-            "body": {
-                "name": "Maanrifa"
-            },
+            "name": "Response body should not be 'Earth is flat !!'",
+            "method": "get",
             "validation": {
-                "type": "json",
+                "type": "plain",
                 "status": 200,
-                "body": {
-                    "message": "Hello, Maanrifa"
-                }
+                "body": "Earth is flat !!"
+            }
+        },
+        {
+            "name": "Response body should be 'Hello, world !!'",
+            "method": "get",
+            "validation": {
+                "type": "plain",
+                "status": 200,
+                "body": "Hello, world !!"
+            }
+        },
+        {
+            "name": "Response body should be 'Hello, Kotlin !!' if the method is different from GET and request body is 'Kotlin'",
+            "method": "post",
+            "type": "plain",
+            "body": "Kotlin",
+            "validation": {
+                "type": "plain",
+                "status": 200,
+                "body": "Hello, Kotlin !!"
             }
         }
     ]

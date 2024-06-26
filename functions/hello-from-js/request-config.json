@@ -1,0 +1,23 @@
+{
+    "headers": {
+        "Authorization": "Bearer ${ANON_KEY}",
+        "Content-Type": "application/json"
+    },
+    "requests": [
+        {
+            "name": "my-awesome-request",
+            "type": "json",
+            "method": "post",
+            "body": {
+                "name": "Maanrifa"
+            },
+            "validation": {
+                "type": "json",
+                "status": 200,
+                "body": {
+                    "message": "Hello, Maanrifa"
+                }
+            }
+        }
+    ]
+}

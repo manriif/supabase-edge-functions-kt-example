@@ -7,6 +7,7 @@ kotlin {
 
     js(IR) {
         moduleName = project.name
+        binaries.library()
         useEsModules()
         nodejs()
     }

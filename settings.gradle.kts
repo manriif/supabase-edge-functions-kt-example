@@ -1,4 +1,4 @@
-rootProject.name = "supabase-edge-functions-kt-template"
+rootProject.name = "supabase-edge-functions-kt-example"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
@@ -18,9 +18,12 @@ dependencyResolutionManagement {
 
     repositories {
         mavenCentral()
+        mavenLocal()
     }
 }
 
 include(":functions:shared")
 include(":functions:hello-world")
-include(":functions:request-count")
+include(":functions:hello-from-js")
+include(":functions:hello-from-js-from-shared")
+include(":functions:database-interaction")
