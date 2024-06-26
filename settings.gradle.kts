@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 
 include(":functions:shared")
 include(":functions:hello-world")
-include(":functions:call-js-from-js")
-include(":functions:call-js-located-in-other-module")
+include(":functions:call-js-from-kotlin")
+include(":functions:call-js-in-another-module")
 include(":functions:call-kotlin-from-js")
 include(":functions:database-interaction")

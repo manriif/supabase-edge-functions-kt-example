@@ -1,5 +1,5 @@
-import { howAreYou } from 'module'
+import { howAreYou } from 'module';
 
 export function bonjour(name) {
-    return "Bonjour " + name + ", " + howAreYou()
+    return "Bonjour " + name + ", " + howAreYou();
 }

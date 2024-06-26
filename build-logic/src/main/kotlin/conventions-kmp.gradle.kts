@@ -6,11 +6,15 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
     js(IR) {
-        moduleName = project.name
         binaries.library()
         useEsModules()
         nodejs()
     }
-}
 
+    sourceSets {
+        jsMain {
+            languageSettings.optIn("kotlin.js.ExperimentalJsExport")
+        }
+    }
+}
 
