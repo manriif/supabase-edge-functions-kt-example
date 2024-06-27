@@ -5,7 +5,6 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         gradlePluginPortal()
-        mavenLocal()
     }
 
     versionCatalogs {
