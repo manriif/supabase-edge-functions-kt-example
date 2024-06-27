@@ -1,3 +1,5 @@
+import io.github.manriif.supabase.functions.ExperimentalSupabaseFunctionApi
+import io.github.manriif.supabase.functions.serve.stacktrace.StackTraceSourceMapStrategy
 import io.github.manriif.supabase.functions.task.SupabaseFunctionServeTask
 
 plugins {
@@ -13,9 +15,12 @@ supabaseFunction {
 
 tasks {
     withType<SupabaseFunctionServeTask> {
+        @OptIn(ExperimentalSupabaseFunctionApi::class)
+        stackTraceSourceMapStrategy = StackTraceSourceMapStrategy.KotlinPreferred
+
         autoRequest {
-            // Set to true if you want more output about request
-            logResponse = false
+            // Set to false if you do not want responses to be printed
+            logResponse = true
         }
     }
 }

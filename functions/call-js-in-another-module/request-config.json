@@ -1,22 +1,15 @@
 {
     "headers": {
-        "Authorization": "Bearer ${ANON_KEY}",
-        "Content-Type": "application/json"
+        "Authorization": "Bearer ${ANON_KEY}"
     },
     "requests": [
         {
-            "name": "my-awesome-request",
-            "type": "json",
-            "method": "post",
-            "body": {
-                "name": "Maanrifa"
-            },
+            "name": "shared module should say how are you in spanish",
+            "method": "get",
             "validation": {
-                "type": "json",
+                "type": "plain",
                 "status": 200,
-                "body": {
-                    "message": "Hello, Maanrifa"
-                }
+                "body": "¡Hola!, como estas ?"
             }
         }
     ]

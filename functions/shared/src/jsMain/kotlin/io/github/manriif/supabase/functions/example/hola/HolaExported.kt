@@ -1,4 +1,4 @@
-package io.github.manriif.supabase.functions.example
+package io.github.manriif.supabase.functions.example.hola
 
 @JsExport
 fun publicSharedHello(): String {

@@ -1,22 +1,16 @@
 {
     "headers": {
-        "Authorization": "Bearer ${ANON_KEY}",
+        "Authorization": "Bearer ${SERVICE_ROLE_KEY}",
         "Content-Type": "application/json"
     },
     "requests": [
         {
-            "name": "my-awesome-request",
+            "name": "should returns 200 status code",
             "type": "json",
             "method": "post",
             "body": {
-                "name": "Maanrifa"
-            },
-            "validation": {
-                "type": "json",
-                "status": 200,
-                "body": {
-                    "message": "Hello, Maanrifa"
-                }
+                "email": "new_user@example.com",
+                "password": "Ap4s5w0Rd"
             }
         }
     ]
