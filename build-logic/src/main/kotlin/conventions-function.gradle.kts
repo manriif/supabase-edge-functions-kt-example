@@ -11,6 +11,12 @@ supabaseFunction {
     // All functions share the same package name for simplicity
     packageName = "io.github.manriif.supabase.functions.example"
     verifyJwt = false
+
+    runConfiguration {
+        request {
+            continuous = false
+        }
+    }
 }
 
 tasks {
