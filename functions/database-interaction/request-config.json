@@ -1,16 +1,54 @@
 {
     "headers": {
-        "Authorization": "Bearer ${SERVICE_ROLE_KEY}",
+        "Authorization": "Bearer ${ANON_KEY}",
         "Content-Type": "application/json"
     },
     "requests": [
         {
-            "name": "should returns 200 status code",
+            "name": "only one row should be returned",
             "type": "json",
             "method": "post",
             "body": {
-                "email": "new_user@example.com",
-                "password": "Ap4s5w0Rd"
+                "rowCount": 1
+            },
+            "validation": {
+                "type": "json",
+                "status": 200,
+                "body": {
+                    "cities": [
+                        {
+                            "id": 1,
+                            "name": "Bordeaux",
+                            "country": "France"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "two rows should be returned",
+            "type": "json",
+            "method": "post",
+            "body": {
+                "rowCount": 2
+            },
+            "validation": {
+                "type": "json",
+                "status": 200,
+                "body": {
+                    "cities": [
+                        {
+                            "id": 1,
+                            "name": "Bordeaux",
+                            "country": "France"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Berlin",
+                            "country": "Germany"
+                        }
+                    ]
+                }
             }
         }
     ]
