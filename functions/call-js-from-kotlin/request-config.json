@@ -1,0 +1,15 @@
+{
+    "headers": {
+        "Authorization": "Bearer ${ANON_KEY}"
+    },
+    "requests": [
+        {
+            "name": "calling JS sayHello() should returns 'Hello from JS !!'",
+            "method": "get",
+            "validation": {
+                "type": "plain",
+                "body": "Hello from JS !!"
+            }
+        }
+    ]
+}

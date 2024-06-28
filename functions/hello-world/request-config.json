@@ -1,0 +1,36 @@
+{
+    "headers": {
+        "Authorization": "Bearer ${ANON_KEY}"
+    },
+    "requests": [
+        {
+            "name": "Response body should not be 'Earth is flat !!'",
+            "method": "get",
+            "validation": {
+                "type": "plain",
+                "status": 200,
+                "body": "Earth is flat !!"
+            }
+        },
+        {
+            "name": "Response body should be 'Hello, world !!'",
+            "method": "get",
+            "validation": {
+                "type": "plain",
+                "status": 200,
+                "body": "Hello, world !!"
+            }
+        },
+        {
+            "name": "Response body should be 'Hello, Kotlin !!' if the method is different from GET and request body is 'Kotlin'",
+            "method": "post",
+            "type": "plain",
+            "body": "Kotlin",
+            "validation": {
+                "type": "plain",
+                "status": 200,
+                "body": "Hello, Kotlin !!"
+            }
+        }
+    ]
+}

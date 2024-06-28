@@ -1,0 +1,55 @@
+{
+    "headers": {
+        "Authorization": "Bearer ${ANON_KEY}",
+        "Content-Type": "application/json"
+    },
+    "requests": [
+        {
+            "name": "only one row should be returned",
+            "type": "json",
+            "method": "post",
+            "body": {
+                "rowCount": 1
+            },
+            "validation": {
+                "type": "json",
+                "status": 200,
+                "body": {
+                    "cities": [
+                        {
+                            "id": 1,
+                            "name": "Bordeaux",
+                            "country": "France"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "two rows should be returned",
+            "type": "json",
+            "method": "post",
+            "body": {
+                "rowCount": 2
+            },
+            "validation": {
+                "type": "json",
+                "status": 200,
+                "body": {
+                    "cities": [
+                        {
+                            "id": 1,
+                            "name": "Bordeaux",
+                            "country": "France"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Berlin",
+                            "country": "Germany"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

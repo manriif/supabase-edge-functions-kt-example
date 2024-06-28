@@ -1,0 +1,16 @@
+{
+    "headers": {
+        "Authorization": "Bearer ${ANON_KEY}"
+    },
+    "requests": [
+        {
+            "name": "shared module should say how are you in spanish",
+            "method": "get",
+            "validation": {
+                "type": "plain",
+                "status": 200,
+                "body": "¡Hola!, como estas ?"
+            }
+        }
+    ]
+}
