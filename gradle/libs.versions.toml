@@ -2,11 +2,11 @@
 
 template = "0.0.1"
 
-kotlin = "2.0.0"
-kotlinx-serialization = "1.7.0"
+kotlin = "2.1.0-Beta2"
+kotlinx-serialization = "1.7.3"
 
-supabase-edge-functions = "0.0.5"
-supabase = "2.5.0"
+supabase-edge-functions = "0.0.6"
+supabase = "3.0.1"
 
 [plugins]
 
@@ -27,5 +27,5 @@ supabase-edge-functions-gradle-plugin = { module = "io.github.manriif.supabase-f
 supabase-edge-functions-module-binding-deno = { module = "io.github.manriif.supabase-functions:module-binding-deno", version.ref = "supabase-edge-functions" }
 supabase-edge-functions-module-fetch-json = { module = "io.github.manriif.supabase-functions:module-fetch-json", version.ref = "supabase-edge-functions" }
 
-supabase-gotrue = { module = "io.github.jan-tennert.supabase:gotrue-kt", version.ref = "supabase" }
+supabase-auth = { module = "io.github.jan-tennert.supabase:auth-kt", version.ref = "supabase" }
 supabase-postgrest = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "supabase" }

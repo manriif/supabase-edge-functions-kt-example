@@ -1,8 +1,8 @@
 package io.github.manriif.supabase.functions.example
 
-import io.github.jan.supabase.gotrue.Auth
-import io.github.jan.supabase.gotrue.MemoryCodeVerifierCache
-import io.github.jan.supabase.gotrue.MemorySessionManager
+import io.github.jan.supabase.auth.Auth
+import io.github.jan.supabase.auth.MemoryCodeVerifierCache
+import io.github.jan.supabase.auth.MemorySessionManager
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.manriif.supabase.functions.binding.deno.Deno
 import io.github.manriif.supabase.functions.binding.deno.SupabaseSecrets
